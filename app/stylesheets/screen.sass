@@ -1,0 +1,230 @@
+@import blueprint.sass
+@import blueprint/modules/scaffolding.sass
+@import compass/reset.sass
+@import compass/utilities.sass
+
++blueprint-typography
++blueprint-debug
+// Remove the scaffolding when you're ready to start doing visual design.
+// Or leave it in if you're happy with how blueprint looks out-of-the-box
++blueprint-scaffolding
+
+=set-alpha(!arg)
+  :filter alpha(opacity=!arg*100)
+  :opacity = !arg
+  :-moz-opacity = !arg
+
+=set-arrowleft
+  :background url("/images/buttons/btn.arrow.png") center left no-repeat transparent
+  :padding-left 20px
+  :line-height 24px
+  :height 24px
+  :position relative
+  :white-space nowrap
+  :display block
+  :text-decoration none
+  :font-weight bold
+  :font-size 24px
+  :color #000
+
+    
+  
+
+=set-tab
+  :border-left 1px solid #DDD
+  :padding-left 10px
+  :margin-top 20px
+
+.tab
+  +set-tab
+
+.arrow
+  +set-arrowleft
+  :margin-left 0px
+  :margin-right 5px
+.arrow:hover 
+  :margin-left 5px
+  :margin-right 0px
+  +set-alpha(0.5)
+ 
+hr 
+  :border 0
+  :border-bottom 1px solid #ddd
+  :height 1px 
+  :display block
+  :padding-top 10px
+  :padding-bottom 10px
+  :clear both
+  :background transparent
+
+body
+  :margin 0px
+  :padding 0px
+  :min-width 950px
+  :font-family "Trebuchet MS"
+
+div
+  :text-align left
+
+#branding_background,#copyright_background
+  :display block
+  :clear both
+  :width 100%
+
+#branding-container
+  +container
+
+  :overflow visible
+
+.on a, #header #menu a:hover
+  :height 80px
+  :display block
+  :text-decoration none
+  :background url("/images/buttons/btn.menu.png") bottom center no-repeat transparent
+
+#header #menu a:hover
+  +set-alpha(0.5)
+
+#header
+  :position relative
+  +column(24)
+  #menu
+    +horizontal-list
+    :position absolute
+    :top 1em
+    :right 0px
+    :margin-top 1em
+    li
+      :border-left 1px solid #DDDDDD
+      :line-height 80px
+      :height 80px
+      :font-size 1.5em
+      :font-weight bold
+      :color #000
+      :padding-left 5px
+      a
+        :color #000
+      img
+        :position relative
+        :top 10px
+  h1
+    +replace-text("/images/logos/logo.smile-effect.midi.png")
+    :width 355px
+    :height 100px
+  a
+    +hover-link
+#calculator
+  +column(15) 
+
+  table
+    +alternating-rows-and-columns(#eee, #fff, #fff)
+    :width 100%
+
+
+#teaser
+  +column(24)
+  :position relative
+  a:hover
+    +set-alpha(0.9)
+    img
+      :padding 2px
+      :width 315px
+      :height 295px
+
+  #teaser_img
+    +column(16, true)
+
+  #teaserleft
+    +column(8)
+  
+
+  #teasercenter
+    +column(8)
+  
+
+  #teaserright
+    +column(8, true)
+  #teaser_img
+    :position relative
+
+#content
+  +column(24)
+  :font-size 1.2em
+  h1
+    :font-weight bold
+    :font-size 3em
+  h3
+    :font-weight normal
+    :font-size 1.8em
+    :color #A6A6A6
+
+#contentleft
+  +column(8)
+
+  
+	
+#contentcenter
+  +column(8)
+ 
+	
+#contentright
+  +column(8, true)	
+  
+
+#footer
+  +column(24)
+  :font-size 1em
+  :border-top 1px solid #DDDDDD
+  :padding-top 20px
+#footercontentleft
+  +column(8)
+  :position relative
+
+#footercontentcenter
+  +column(8)
+ 
+  :position relative
+
+#footercontentright
+  +column(8, true)
+  :position relative
+
+#copyright_background
+  :overflow visible
+  :position relative
+  :border-top 1px solid #DDDDDD
+  :background-color #000000
+  :color #FFF
+  :height 60px
+  a
+    :color #FFF
+    :text-decoration none
+  a:hover
+    :text-decoration underline
+    +set-alpha(0.5)
+
+#copyright
+  +column(24)
+  :font-size 1em
+  :padding-top 20px
+#copyright_a
+  +column(3)
+#copyright_b
+  +column(7)
+#copyright_c
+  +column(10)
+#copyright_d
+  +column(3,true)
+.img_spacer
+  :float left
+
+.theme_marketing
+  h1
+    :color #D16414
+.theme_web
+  h1
+    :color #3ABD1C
+.theme_design
+  h1
+    :color #12A8D3
+

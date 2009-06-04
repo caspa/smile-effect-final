@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+	<%= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'compiled/print.css', :media => 'print' %>
+
+	<!–[if IE]><%= stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection' %><![endif]–> 
+	<title>Smile-Effect</title>
+	<%= yield :html_head %>
+</head>
+<body id="home" class="home-page">
+	<%= cms_toolbar %>
+<div id="branding_background">
+		<div id="branding-container">
+			<div id="header">
+				<h1>Smile-Effect</h1>
+				<%= render :partial => "partials/menustatic" %>
+			</div>
+			<div id="teaser">
+				<div id="teaserleft">
+	<%= render :partial =>"partials/ambient"%>			
+				</div>
+				<div id="teaser_img">	
+<%= render :partial => "partials/teaser_img"%>	
+				
+						
+				
+				</div>
+			</div>
+			<div id="content">
+				<div id="contentleft" class="theme_marketing"><div class="tab">
+<a href="#" class="arrow">Preisrechner</a>				
+<hr/>
+<a href="#" class="arrow">Leistungen</a>	
+<hr/>
+<a href="#" class="arrow">Produkte</a>	
+	
+<hr/>
+				</div>
+</div>
+			<div id="calculator"><div class="tab">	
+<%= render :partial => "partials/calculator" %>
+				</div>
+</div>
+
+			</div>
+<%= render :partial => "partials/footercontent" %>
+			</div>
+</div>
+<div id="copyright_background">
+<div id="branding-container">
+<%= render :partial => "partials/footer" %>
+</div>
+</div>
+	</body>
+	</html>
+
+
+

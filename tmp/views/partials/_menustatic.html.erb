@@ -1,0 +1,31 @@
+<div id="menu" class="menu">
+  <ul>
+    <li id="home" class="depth-1 <%= (@page.name=='Home'?'on':'') %>">
+      <a href="/">Home</a>
+    </li>
+<li id="ueber_uns" class="depth-1 <%= (@page.name=='Über uns'?'on':'') %>">
+      <a href="/">Über uns</a>
+    </li>
+<li id="referenzen" class="depth-1 <%= (@page.name=='Referenzen'?'on':'') %>">
+      <a href="/">Referenzen</a>
+    </li>
+<li id="kontakt" class="depth-1 <%= (@page.name=='Kontakt'?'on':'') %>">
+      <a href="/kontakt">Kontakt</a>
+    </li>
+<li id="jobs" class="depth-1 <%= (@page.name=='Jobs'?'on':'') %>">
+      <a href="/">Jobs</a>
+    </li>
+<li id="orange" class="depth-1 <%= (@page.name=='marketing'?'on':'') %>">
+      <a href="/marketing"><%= image_tag "buttons/btn.orange.png" %></a>
+    </li>
+<li id="green" class="depth-1 <%= (@page.name=='web'?'on':'') %>">
+      <a href="/web"><%= image_tag "buttons/btn.green.png" %></a>
+    </li>
+<li id="blue" class="depth-1 <%= (@page.name=='design'?'on':'') %>">
+      <a href="/design"><%= image_tag "buttons/btn.blue.png" %></a>
+    </li>
+
+  </ul>
+</div>
+
+
