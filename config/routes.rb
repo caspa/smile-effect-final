@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.namespace('cms') {|cms| cms.content_blocks :players }
+
+  map.namespace('cms') {|cms| cms.content_blocks :references }
+
+
+  map.routes_for_bcms_news
+
+  
   map.routes_for_browser_cms
 
   # The priority is based upon order of creation: first created -> highest priority.

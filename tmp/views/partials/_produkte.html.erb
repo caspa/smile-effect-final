@@ -1,0 +1,13 @@
+HIer kommen die Produkte
+
+<div id="content_2_3">
+<% if @page.name == "marketing" %>
+<%= container :mkt_produkte %>
+<% end %>
+<% if @page.name == "web" %>
+<%= container :web_produkte %>
+<% end %>
+<% if @page.name == "design" %>
+<%= container :design_produkte %>
+<% end %>
+</div>

@@ -1,0 +1,22 @@
+<div class="email-page-portlet">
+  <% form_for @contact_message, :url => cms_handler_path(@portlet, "deliver") do |f| %>
+    <%= hidden_field_tag :email_page_portlet_url, @email_page_portlet_url %> 
+    <%= f.error_messages %>
+   <p>
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name %>
+    </p>
+   <p>
+      <%= f.label :user_contact %>
+      <%= f.text_field :user_contact %>
+    </p>
+   
+    <p>
+      <%= f.label :body %>
+      <%= f.text_area :body, :size => "50x3" %>
+    </p>
+    <p>
+      <%= submit_tag "Send Email" %>
+    </p>
+  <% end %>
+</div>

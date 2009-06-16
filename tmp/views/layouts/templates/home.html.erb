@@ -13,7 +13,7 @@
 <body id="home" class="home-page">
 	<%= cms_toolbar %>
 <div id="branding_background">
-		<div id="branding-container">
+		<div id="branding-container" class="view_all">
 			<div id="header">
 				<h1>Smile-Effect</h1>
 				<%= render :partial => "partials/menustatic" %>
@@ -42,30 +42,68 @@
 					<%= container :contentright %>	
 				</div>
 </div>
+
+
+
 			</div>
 			<div id="content">
-				<div id="contentleft" class="theme_marketing"><div class="tab">
-<a href="/marketing" class="arrow">Weiter</a>
+				<div id="contentleft" class="theme_marketing">
+					<div class="tab">
+						<a href="#" id="item_event" class="next">
+							<div id="item_info">
+								<p>Weiter lesen:</p>
+								<h3>Marketing</h3>
+							</div>
+							<br/>
+						</a>
+					</div>
+				</div>
+				<div id="contentcenter" class="theme_web">
+					<div class="tab">
+						<a href="#" id="item_event" class="next">
+							<div id="item_info">
+								<p>Weiter lesen:</p>
+								<h3>Web</h3>
+							</div>
+							<br/>
+						</a>
+					</div>
+				</div>
+				<div id="contentright" class="theme_design">	
+					<div class="tab">
+						<a href="#" id="item_event" class="next">
+							<div id="item_info">
+								<p>Weiter lesen:</p>
+								<h3>Design</h3>
+							</div>
+							<br/>
+						</a>
+					</div>
+				</div>
+				
+<!--NUR AUSKOMMENTIERT, NICHT LÖSCHEN!!
+<hr/>
+				<div id="contentleft"><div class="tab">
+<%= container :newsticker %>
 				</div>
 </div>
-				<div id="contentcenter" class="theme_web"><div class="tab">		
-<a href="/web" class="arrow">Weiter</a>			
+				<div id="contentcenter"><div class="tab">		
+<%= render :partial => "partials/projekt_demos" %>		
 				</div>
 </div>
-				<div id="contentright" class="theme_design"><div class="tab">		
-<a href="/design" class="arrow">Weiter</a>	
+				<div id="contentright"><div class="tab">		
+<%= render :partial => "partials/projekt_monitor" %>	
 				</div>
 </div>
-			</div>
+-->		
+</div>
 <br/>&nbsp;
-<%= render :partial => "partials/footercontent" %>
+
 			</div>
 </div>
-<div id="copyright_background">
-<div id="branding-container">
+<%= render :partial => "partials/footercontent" %>
 <%= render :partial => "partials/footer" %>
-</div>
-</div>
+
 	</body>
 	</html>
 

@@ -5,6 +5,7 @@
 
 +blueprint-typography
 +blueprint-debug
+
 // Remove the scaffolding when you're ready to start doing visual design.
 // Or leave it in if you're happy with how blueprint looks out-of-the-box
 +blueprint-scaffolding
@@ -15,7 +16,10 @@
   :-moz-opacity = !arg
 
 =set-arrowleft
-  :background url("/images/buttons/btn.arrow.png") center left no-repeat transparent
+  :background-image url("/images/buttons/btn.arrow.png")
+  :background-position 0px center 
+  :background-repeat no-repeat
+  :background-color transparent
   :padding-left 20px
   :line-height 24px
   :height 24px
@@ -35,16 +39,99 @@
   :padding-left 10px
   :margin-top 20px
 
+
+h1
+  :line-height 70px
+	
+.errorExplanation
+  :font normal 18px Trebuchet MS
+ 
+  ul
+    +column(16,true)
+    :margin 0px
+    :padding 0px
+    :margin-bottom 20px	
+  li
+    :height 70px
+    :background url("/images/backgrounds/bg.warning.png") 5px center no-repeat transparent
+    :color #ffb400
+    :list-style none
+    :padding 10px 
+    :padding-left 100px
+    :padding-top 30px
+
+.textfield
+  :font bold 24px Trebuchet MS
+  :color #000
+  :width 431px
+  :height 56px
+  :border 0px
+  :background url("/images/buttons/textfield.png") top left no-repeat transparent
+  :padding 10px
+  :padding-top 15px
+
+.textarea
+  :font normal 24px Trebuchet MS
+  :color #000
+  :width 630px
+  :height 200px
+  :border 0px
+  :padding 10px
+  :background url("/images/buttons/textarea.png") top left no-repeat transparent
+
+.field_item
+  +column(16,true)
+  .label
+    +column(5)
+  .field
+    +column(11,true)
+
+.field_area
+  +column(16,true)
+  .label
+    :display block
+  .field
+    :display block
+
+.submit_item
+  +column(16,true)
+  .label
+    +column(8)
+  .field
+    +column(8,true)
+
+form hr
+  +column(16,true)
+  :padding 0px
+  :margin 0px
+	
+.label
+  label
+    :display block
+    :font bold 18px Trebuchet MS
+    :color #000
+  small
+    :display block
+    :font normal 18px Trebuchet MS
+    :color #000
+    :background-image url("/images/buttons/btn.arrow.png")
+    :background-position 0px center 
+    :background-repeat no-repeat
+    :background-color transparent
+  :margin-bottom 10px
 .tab
   +set-tab
 
 .arrow
   +set-arrowleft
-  :margin-left 0px
-  :margin-right 5px
-.arrow:hover 
-  :margin-left 5px
-  :margin-right 0px
+  :background-position 0px center 
+  :padding-left 20px
+  :padding-right 5px
+
+.arrow:hover
+  :background-position 5px center 
+  :padding-left 25px
+  :padding-right 0px
   +set-alpha(0.5)
  
 hr 
@@ -66,15 +153,15 @@ body
 div
   :text-align left
 
-#branding_background,#copyright_background
-  :display block
-  :clear both
-  :width 100%
+#reference_item_info
+  +column(8)
+
+#reference_item_img
+  +column(8, true)
+  :overflow visible
 
 #branding-container
   +container
-
-  :overflow visible
 
 .on a, #header #menu a:hover
   :height 80px
@@ -114,7 +201,7 @@ div
   a
     +hover-link
 #calculator
-  +column(15) 
+  +column(15,true) 
 
   table
     +alternating-rows-and-columns(#eee, #fff, #fff)
@@ -124,65 +211,87 @@ div
 #teaser
   +column(24)
   :position relative
+  a
+    img
+      :padding 0px
+      :width 320px
+      :height 300px
   a:hover
     +set-alpha(0.9)
     img
-      :padding 2px
-      :width 315px
-      :height 295px
+      :padding 1px
+      :width 318px
+      :height 298px
 
   #teaser_img
     +column(16, true)
 
   #teaserleft
     +column(8)
-  
-
   #teasercenter
-    +column(8)
-  
-
+    +column(8)  
   #teaserright
     +column(8, true)
+
   #teaser_img
     :position relative
 
 #content
   +column(24)
   :font-size 1.2em
+  :color #000
+  a
+    :color #000
   h1
     :font-weight bold
     :font-size 3em
   h3
     :font-weight normal
     :font-size 1.8em
-    :color #A6A6A6
+    :color #000
+
+#content_2_3
+  +column(16, true)
+
+#content_1_3
+  +column(8)
 
 #contentleft
   +column(8)
-
-  
 	
 #contentcenter
   +column(8)
- 
-	
+
 #contentright
-  +column(8, true)	
-  
+  +column(8, true)
+	
+#monitorcontent
+  +column(24, true)
+
+#footer_background
+  :background url("/images/backgrounds/bg.gray.gif") #000000
+  :color #FFF
+  a
+    :color #FFF
+    :text-decoration none
+  a:hover
+    :text-decoration underline
+    +set-alpha(0.5)
+#footer_shine
+  :background url("/images/backgrounds/shine.png") top left no-repeat transparent
 
 #footer
   +column(24)
   :font-size 1em
-  :border-top 1px solid #DDDDDD
   :padding-top 20px
+  :padding-bottom 20px
+
 #footercontentleft
   +column(8)
   :position relative
 
 #footercontentcenter
   +column(8)
- 
   :position relative
 
 #footercontentright
@@ -190,12 +299,8 @@ div
   :position relative
 
 #copyright_background
-  :overflow visible
-  :position relative
-  :border-top 1px solid #DDDDDD
   :background-color #000000
   :color #FFF
-  :height 60px
   a
     :color #FFF
     :text-decoration none
@@ -206,7 +311,8 @@ div
 #copyright
   +column(24)
   :font-size 1em
-  :padding-top 20px
+  :padding-top 15px
+  :padding-bottom 10px
 #copyright_a
   +column(3)
 #copyright_b
@@ -215,6 +321,10 @@ div
   +column(10)
 #copyright_d
   +column(3,true)
+
+#branding-container.view_all
+  :overflow visible
+
 .img_spacer
   :float left
 
@@ -227,4 +337,138 @@ div
 .theme_design
   h1
     :color #12A8D3
+
+#item_event
+  :display block
+  :padding 0px
+  :margin 0px	
+  :text-decoration none
+  :width 300px
+  :background url("/images/buttons/btn.arrow.png") 
+  :background-position -20px center
+  :background-repeat no-repeat
+  :background-color transparent
+  :padding-left 0px
+  :padding-right 5px
+
+#item_event.next
+  :background-position 270px center
+
+#item_event:hover
+  :background-position 275px center
+  +set-alpha(0.5)
+  :padding-left 5px
+  :padding-right 0px
+
+#item_date
+  :float left
+  :width 41px
+  :height 41px
+  :padding 0px
+  :margin 0px
+  :background url("/images/buttons/btn.date.png") left top no-repeat transparent
+
+#item_date_day
+  :color #000000 
+  :position relative
+  :top -3px
+  :width 41px
+  :height 20px
+  :padding 0px
+  :margin 0px
+  :text-align center
+  :font normal 20px arial black
+
+#item_date_month
+  :color #fff
+  :position relative
+  :top 4px
+  :width 41px
+  :height 10px
+  :padding 0px
+  :margin 0px
+  :text-align center
+  :font normal 9px arial black
+
+#item_info
+  :float left
+  :width 210px
+  :padding 0px
+  :padding-top 2px
+  :padding-left 10px
+  :margin 0px
+  :text-align left
+  :font normal 0.9em Trebuchet MS
+
+#item_info h3
+  :padding 0px
+  :margin 0px
+  :color #000
+  :font bold 1.2em Trebuchet MS
+
+#item_event p
+  :padding 0px
+  :margin 0px
+
+#item_event br
+  :line-height 0px
+  :height 0px
+  :clear both
+  :padding 0px
+  :margin 0px
+
+#item_contact
+  +column(8,true)
+
+#item_contact_title
+  +column(8,true)
+  :color #fff
+  :background url("/images/backgrounds/bg.grunge.tab.png") top left no-repeat transparent
+  :height 84px
+
+#item_contact_img
+  +column(3)
+  img
+    :margin 10px
+#item_contact_name
+  +column(4,true)
+  :text-align right
+  h1
+    :line-height 24px
+    :color #fff
+    :font-size 24px
+    :font-weight bold
+    :padding 0px
+    :margin 0px
+  h2
+    :color #fff
+    :font-size 18px
+    :font-weight normal
+    :padding 0px
+    :padding-top 5px
+    :margin 0px
+
+#item_contact_data
+  +column(8,true)
+  :margin 0px
+  a
+    :text-decoration none
+  tr
+    +column(8,true)
+  th
+    :padding-left 10px
+    :width 10px
+#item_contact_row
+  :color #fff
+  a
+    :color #fff
+  :height 34px
+  :background url("/images/backgrounds/bg.grunge.tab.item.png") top left no-repeat transparent
+#item_contact_row:hover
+  +set-alpha(0.5)
+
+
+.ico_title
+  :float left
+  :margin-right 20px
 

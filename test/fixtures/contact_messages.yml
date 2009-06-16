@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sender: MyString
+  recipients: MyText
+  subject: MyText
+  cc: MyText
+  bcc: MyText
+  body: MyText
+  content_type: MyString
+  delivered_at: 2009-06-05 17:35:19
+
+two:
+  sender: MyString
+  recipients: MyText
+  subject: MyText
+  cc: MyText
+  bcc: MyText
+  body: MyText
+  content_type: MyString
+  delivered_at: 2009-06-05 17:35:19

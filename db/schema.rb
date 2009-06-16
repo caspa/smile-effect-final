@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081114172307) do
+ActiveRecord::Schema.define(:version => 20090611215310) do
 
   create_table "attachment_versions", :force => true do |t|
     t.integer  "attachment_id"
@@ -72,6 +72,22 @@ ActiveRecord::Schema.define(:version => 20081114172307) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "contact_messages", :force => true do |t|
+    t.string   "sender"
+    t.text     "recipients"
+    t.text     "subject"
+    t.text     "cc"
+    t.text     "bcc"
+    t.text     "body"
+    t.string   "content_type"
+    t.datetime "delivered_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "user_name"
+    t.string   "user_contact"
+    t.string   "link"
   end
 
   create_table "content_type_groups", :force => true do |t|
@@ -260,6 +276,47 @@ ActiveRecord::Schema.define(:version => 20081114172307) do
     t.integer  "updated_by_id"
   end
 
+  create_table "news_article_versions", :force => true do |t|
+    t.integer  "news_article_id"
+    t.integer  "version"
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "release_date"
+    t.integer  "category_id"
+    t.integer  "attachment_id"
+    t.integer  "attachment_version"
+    t.text     "summary"
+    t.text     "body"
+    t.boolean  "published",          :default => false
+    t.boolean  "deleted",            :default => false
+    t.boolean  "archived",           :default => false
+    t.string   "version_comment"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "news_articles", :force => true do |t|
+    t.integer  "version"
+    t.integer  "lock_version",       :default => 0
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "release_date"
+    t.integer  "category_id"
+    t.integer  "attachment_id"
+    t.integer  "attachment_version"
+    t.text     "summary"
+    t.text     "body"
+    t.boolean  "published",          :default => false
+    t.boolean  "deleted",            :default => false
+    t.boolean  "archived",           :default => false
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "page_route_options", :force => true do |t|
     t.integer  "page_route_id"
     t.string   "type"
@@ -330,6 +387,55 @@ ActiveRecord::Schema.define(:version => 20081114172307) do
     t.datetime "updated_at"
   end
 
+  create_table "player_versions", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "version"
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "tel"
+    t.string   "fax"
+    t.string   "mobile"
+    t.string   "email"
+    t.string   "homepage"
+    t.string   "image_path"
+    t.string   "street"
+    t.string   "zip_code"
+    t.string   "city"
+    t.string   "name"
+    t.boolean  "published",       :default => false
+    t.boolean  "deleted",         :default => false
+    t.boolean  "archived",        :default => false
+    t.string   "version_comment"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "players", :force => true do |t|
+    t.integer  "version"
+    t.integer  "lock_version",  :default => 0
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "tel"
+    t.string   "fax"
+    t.string   "mobile"
+    t.string   "email"
+    t.string   "homepage"
+    t.string   "image_path"
+    t.string   "street"
+    t.string   "zip_code"
+    t.string   "city"
+    t.string   "name"
+    t.boolean  "published",     :default => false
+    t.boolean  "deleted",       :default => false
+    t.boolean  "archived",      :default => false
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "portlet_attributes", :force => true do |t|
     t.integer "portlet_id"
     t.string  "name"
@@ -350,6 +456,45 @@ ActiveRecord::Schema.define(:version => 20081114172307) do
   create_table "redirects", :force => true do |t|
     t.string   "from_path"
     t.string   "to_path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reference_versions", :force => true do |t|
+    t.integer  "reference_id"
+    t.integer  "version"
+    t.string   "name"
+    t.text     "body"
+    t.string   "path"
+    t.string   "link"
+    t.boolean  "marketing"
+    t.boolean  "web"
+    t.boolean  "design"
+    t.boolean  "published",       :default => false
+    t.boolean  "deleted",         :default => false
+    t.boolean  "archived",        :default => false
+    t.string   "version_comment"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "references", :force => true do |t|
+    t.integer  "version"
+    t.integer  "lock_version",  :default => 0
+    t.string   "name"
+    t.text     "body"
+    t.string   "path"
+    t.string   "link"
+    t.boolean  "marketing"
+    t.boolean  "web"
+    t.boolean  "design"
+    t.boolean  "published",     :default => false
+    t.boolean  "deleted",       :default => false
+    t.boolean  "archived",      :default => false
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,32 @@
+<% @references.each do |reference| %>
+<div id="reference_item"><div id="tab">
+
+	<div id="reference_item_info">
+		<h3><%= reference.name %></h3>
+		<p><% if reference.marketing? %>
+			<%= image_tag "buttons/btn.marketing.circle.png"%>
+			<% end %>
+			<% if reference.web? %>
+				<%= image_tag "buttons/btn.web.circle.png"%>
+				<% end %>
+				<% if reference.design? %>
+					<%= image_tag "buttons/btn.design.circle.png"%>
+					<% end %>	
+		</p>
+		<p><%= reference.body %></p>
+		<% unless reference.link.blank? %>
+		<a href="<%= reference.link %>" id="item_event" class="next">
+			<div id="item_info">
+				<p>Weiter zu:</p>
+				<h3><%= reference.link %></h3>
+			</div>
+			<br/>
+		</a>
+		<% end %>
+	</div>
+		<img src="/images/backgrounds/photo.png" style="background:url(<%= reference.path %>) center center no-repeat #000;" id="reference_item_img" class="photo_frame"/>
+</div>
+</div>
+<hr/>
+<br/>
+<% end %>
