@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+       <%= javascript_include_tag :defaults %>
 	<%= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection' %>
 	<%= stylesheet_link_tag 'compiled/print.css', :media => 'print' %>
 
@@ -19,6 +20,8 @@
 				<%= render :partial => "partials/menustatic" %>
 			</div>
 			<div id="teaser">
+<!--<% swf_tag "familie", :size => "400x300", :flash_version => "10" do %>-->
+
 				<div id="teaserleft">
 					<a href="/marketing"><%= image_tag "buttons/btn.marketing.png", :class => "img_left" %></a>
 				</div>
@@ -29,6 +32,7 @@
 					<a href="/design"><%= image_tag "buttons/btn.design.png", :class => "img_right" %></a>
 				</div>
 			</div>
+<!--<% end %>-->
 			<div id="content">
 				<div id="contentleft" class="theme_marketing"><div class="tab">
 					<%= container :contentleft %>
@@ -42,6 +46,7 @@
 					<%= container :contentright %>	
 				</div>
 </div>
+
 
 
 
@@ -81,7 +86,7 @@
 					</div>
 				</div>
 				
-<!--NUR AUSKOMMENTIERT, NICHT LÖSCHEN!!
+
 <hr/>
 				<div id="contentleft"><div class="tab">
 <%= container :newsticker %>
@@ -95,7 +100,7 @@
 <%= render :partial => "partials/projekt_monitor" %>	
 				</div>
 </div>
--->		
+		
 </div>
 <br/>&nbsp;
 

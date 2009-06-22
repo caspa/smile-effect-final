@@ -1,4 +1,12 @@
-HIer kommen die Leistungen
 <div id="content_2_3">
-<%= container :leistungen %>
+<h1>Leistungen</h1>
+<% if @page.name == "marketing" %>
+<%= container :mkt_leistungen %>
+<% end %>
+<% if @page.name == "web" %>
+<%= container :web_leistungen %>
+<% end %>
+<% if @page.name == "design" %>
+<%= container :design_leistungen %>
+<% end %>
 </div>

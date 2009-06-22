@@ -34,19 +34,19 @@
 
 
 <%= link_to_function 'Leistungen',  update_page {|page| page.replace_html('subcontent',
-                  :partial => 'partials/leistungen')} %>		
+                  :partial => 'partials/leistungen')}, :class => "arrow" %>		
 <hr/>
 <%= link_to_function 'Produkte',  update_page {|page| page.replace_html('subcontent',
-                  :partial => 'partials/produkte')} %>				
+                  :partial => 'partials/produkte')}, :class => "arrow" %>				
 <hr/>
 <%= link_to_function 'Preisrechner',  update_page {|page| page.replace_html('subcontent',
-                  :partial => 'partials/calculator')} %>				
+                  :partial => 'partials/calculator')}, :class => "arrow" %>				
 <hr/>
 
 				</div>
 </div>
 			<div id="subcontent"><div class="tab">	
-<%= render :partial => 'partials/mkt_leistungen' %>
+<%= render :partial => 'partials/leistungen' %>
 				</div>
 </div>
 		
