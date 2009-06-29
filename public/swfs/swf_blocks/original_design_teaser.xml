@@ -1,0 +1,5 @@
+<flipbox title="Design" color="0xffffff" bgcolor="0x1b7e9e" url="/design">
+	<item title="Bild 1" src="../../images/ambients/marketing.01.png" url="/design"/>
+	<item title="Bild 2" src="../../images/ambients/marketing.02.png" url="/design"/>
+	<item title="Bild 3" src="../../images/ambients/marketing.03.png" url="/design"/>
+</flipbox>

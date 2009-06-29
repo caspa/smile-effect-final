@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.namespace('cms') {|cms| cms.content_blocks :swf_blocks }
+
   map.namespace('cms') {|cms| cms.content_blocks :players }
 
   map.namespace('cms') {|cms| cms.content_blocks :references }

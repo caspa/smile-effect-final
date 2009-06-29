@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090611215310) do
+ActiveRecord::Schema.define(:version => 20090627094018) do
 
   create_table "attachment_versions", :force => true do |t|
     t.integer  "attachment_id"
@@ -414,7 +414,7 @@ ActiveRecord::Schema.define(:version => 20090611215310) do
 
   create_table "players", :force => true do |t|
     t.integer  "version"
-    t.integer  "lock_version",  :default => 0
+    t.integer  "lock_version",       :default => 0
     t.string   "last_name"
     t.string   "first_name"
     t.string   "tel"
@@ -427,13 +427,16 @@ ActiveRecord::Schema.define(:version => 20090611215310) do
     t.string   "zip_code"
     t.string   "city"
     t.string   "name"
-    t.boolean  "published",     :default => false
-    t.boolean  "deleted",       :default => false
-    t.boolean  "archived",      :default => false
+    t.boolean  "published",          :default => false
+    t.boolean  "deleted",            :default => false
+    t.boolean  "archived",           :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
   end
 
   create_table "portlet_attributes", :force => true do |t|
@@ -482,7 +485,7 @@ ActiveRecord::Schema.define(:version => 20090611215310) do
 
   create_table "references", :force => true do |t|
     t.integer  "version"
-    t.integer  "lock_version",  :default => 0
+    t.integer  "lock_version",       :default => 0
     t.string   "name"
     t.text     "body"
     t.string   "path"
@@ -490,13 +493,16 @@ ActiveRecord::Schema.define(:version => 20090611215310) do
     t.boolean  "marketing"
     t.boolean  "web"
     t.boolean  "design"
-    t.boolean  "published",     :default => false
-    t.boolean  "deleted",       :default => false
-    t.boolean  "archived",      :default => false
+    t.boolean  "published",          :default => false
+    t.boolean  "deleted",            :default => false
+    t.boolean  "archived",           :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
   end
 
   create_table "section_nodes", :force => true do |t|
@@ -521,6 +527,55 @@ ActiveRecord::Schema.define(:version => 20090611215310) do
     t.string   "name"
     t.string   "domain"
     t.boolean  "the_default"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "swf_block_versions", :force => true do |t|
+    t.integer  "swf_block_id"
+    t.integer  "version"
+    t.string   "name"
+    t.string   "size"
+    t.string   "mode"
+    t.string   "flashvars"
+    t.string   "parameters"
+    t.text     "alternate_html"
+    t.string   "swf_file_name"
+    t.string   "swf_content_type"
+    t.integer  "swf_file_size"
+    t.string   "xml_content_type"
+    t.string   "xml_file_name"
+    t.integer  "xml_file_size"
+    t.boolean  "published",        :default => false
+    t.boolean  "deleted",          :default => false
+    t.boolean  "archived",         :default => false
+    t.string   "version_comment"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "swf_blocks", :force => true do |t|
+    t.integer  "version"
+    t.integer  "lock_version",     :default => 0
+    t.string   "name"
+    t.string   "size"
+    t.string   "mode"
+    t.string   "flashvars"
+    t.string   "parameters"
+    t.text     "alternate_html"
+    t.string   "swf_file_name"
+    t.string   "swf_content_type"
+    t.integer  "swf_file_size"
+    t.string   "xml_content_type"
+    t.string   "xml_file_name"
+    t.integer  "xml_file_size"
+    t.boolean  "published",        :default => false
+    t.boolean  "deleted",          :default => false
+    t.boolean  "archived",         :default => false
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

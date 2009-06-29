@@ -1,12 +1,12 @@
 <div id="content_2_3">
 <h1>Leistungen</h1>
-<% if @page.name == "marketing" %>
+<% if @page.section.name == "marketing" %>
 <%= container :mkt_leistungen %>
 <% end %>
-<% if @page.name == "web" %>
+<% if @page.section.name == "web" %>
 <%= container :web_leistungen %>
 <% end %>
-<% if @page.name == "design" %>
+<% if @page.section.name == "design" %>
 <%= container :design_leistungen %>
 <% end %>
 </div>

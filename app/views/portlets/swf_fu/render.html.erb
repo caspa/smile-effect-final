@@ -1,0 +1,6 @@
+
+
+
+<% swf_tag @file.swf.url, :size => @file.size, :flashvars => "src=#{@file.xml.url}&#{@file.flashvars}" , :parameters => @file.parameters, :flash_version => "10" do %>	
+@file.alternate_html 
+<% end %>

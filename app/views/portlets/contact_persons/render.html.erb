@@ -1,9 +1,39 @@
 <% @players.each do |player| %>
-<%=h player.image_path %>
-<%=h player.first_name %>
-<%=h player.last_name %>
-<%=h player.tel %>
-<%=h player.mobile %>
-<%=h player.email %>
+<div id="item_contact">
+<div id="item_contact_title">
+<div id="item_contact_img">
+<%= image_tag player.photo.url(:thumb), :class => "item_contact_img" %>
+</div>
+<div id="item_contact_name">
+<h2><%=h player.first_name %></h2>
+<h1><%=h player.last_name %></h1>
+</div>
+</div>
+<table cellspacing="0" cellpadding="0" border="0" id="item_contact_data">
+<tr id="item_contact_row">
+<th><%= image_tag "buttons/ico.mail.png", :class => "ico" %></th>
+<td><a href="mailto:<%= player.email %>"><%=h player.email %></a></td>
+</tr>
+<% unless player.tel.blank? %>
+<tr>
+<th><%= image_tag "buttons/ico.tel.png", :class => "ico" %></th>
+<td><%=h player.tel %></td>
+</tr>
+<% end %>
+<% unless player.fax.blank? %>
+<tr>
+<th><%= image_tag "buttons/ico.fax.png", :class => "ico" %></th>
+<td><%=h player.fax %></td>
+</tr>
+<% end %>
+<% unless player.mobile.blank? %>
+<tr>
+<th><%= image_tag "buttons/ico.mobile.png", :class => "ico" %></th>
+<td><%=h player.mobile %></td>
+</tr>
+<% end %>
+</table>
+</div>
+<hr/>
 <% end %>
 

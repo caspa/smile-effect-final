@@ -1,0 +1,44 @@
+<projectDescription>
+  <id>1245171555785</id>
+  <name>smilefx</name>
+  <asVersion>1</asVersion>
+  <boundTemplate>file:///Home/Users/tifi/Library/Application Support/Adobe/Flash CS4/fr/Configuration/Project/templates/boundClass_as2.as</boundTemplate>
+  <classTemplate>file:///Home/Users/tifi/Library/Application Support/Adobe/Flash CS4/fr/Configuration/Project/templates/standardClass_as2.as</classTemplate>
+  <classPath>.</classPath>
+  <defaultApp>file:///Home/Users/tifi/Sites/smile-effect/public/swfs/index.fla</defaultApp>
+  <rootURI>file:///Home/Users/tifi/Sites/smile-effect/public/swfs/</rootURI>
+  <flexSDK/>
+  <sources editable="false"/>
+  <libraries editable="false"/>
+  <externalLibraries editable="false"/>
+  <compileList editable="false"/>
+  <recentFiles editable="false">
+    <uri label="data3.xml">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/flipbox/data3.xml</uri>
+    <uri label="Application.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/Application.as</uri>
+    <uri label="data1.xml">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/flipbox/data1.xml</uri>
+    <uri label="data2.xml">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/flipbox/data2.xml</uri>
+    <uri label="data.xml">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/flipbox/data.xml</uri>
+    <uri label="FX.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/FX.as</uri>
+    <uri label="FlipBox.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/FlipBox.as</uri>
+    <uri label="FlipBoxLink.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/FlipBoxLink.as</uri>
+    <uri label="FlipBoxItem.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/FlipBoxItem.as</uri>
+    <uri label="Label.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/Label.as</uri>
+    <uri label="Text.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/bak/Text.as</uri>
+    <uri label="MusicBox.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/MusicBox.as</uri>
+    <uri label="Util.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/Util.as</uri>
+    <uri label="MultiImage.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/MultiImage.as</uri>
+    <uri label="ImageBox.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/bak/ImageBox.as</uri>
+    <uri label="ImageTheatre.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/bak/ImageTheatre.as</uri>
+    <uri label="MultiImageLoader.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/MultiImageLoader.as</uri>
+    <uri label="init.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/init.as</uri>
+    <uri label="XMLWrapper.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/XMLWrapper.as</uri>
+    <uri label="ImageNaviItem.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/bak/ImageNaviItem.as</uri>
+    <uri label="ImageNavi.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/bak/ImageNavi.as</uri>
+    <uri label="Template.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/Template.as</uri>
+    <uri label="InfoBox.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/bak/InfoBox.as</uri>
+    <uri label="Templates.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/Templates.as</uri>
+    <uri label="Gui.as">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/Gui.as</uri>
+    <uri label="index.fla">file:///Home/Users/tifi/Sites/smile-effect/public/swfs/index.fla</uri>
+  </recentFiles>
+  <locations editable="false"/>
+</projectDescription>

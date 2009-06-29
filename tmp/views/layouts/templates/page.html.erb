@@ -18,35 +18,29 @@
 				<h1>Smile-Effect</h1>
 				<%= render :partial => "partials/menustatic" %>
 			</div>
-			<div id="teaser">
-				<div id="teaserleft">
-	<%= render :partial =>"partials/ambient"%>			
-				</div>
-				<div id="teaser_img">	
-<%= render :partial => "partials/teaser_img"%>	
+			<div id="content">
+<%= container :flashteaser %>
+					
 				
 						
 				
 				</div>
-			</div>
+			
 			<div id="content">
 				<div id="contentleft" class="theme_marketing"><div class="tab">
 
 
-<%= link_to_function 'Leistungen',  update_page {|page| page.replace_html('subcontent',
-                  :partial => 'partials/leistungen')}, :class => "arrow" %>		
+<%= link_to 'Leistungen', "#{@page.name}/leistungen", :class => "arrow" %>		
 <hr/>
-<%= link_to_function 'Produkte',  update_page {|page| page.replace_html('subcontent',
-                  :partial => 'partials/produkte')}, :class => "arrow" %>				
+<%= link_to 'Produkte', "#{@page.name}/leistungen" , :class => "arrow" %>				
 <hr/>
-<%= link_to_function 'Preisrechner',  update_page {|page| page.replace_html('subcontent',
-                  :partial => 'partials/calculator')}, :class => "arrow" %>				
+<%= link_to 'Preisrechner', "#{@page.name}/leistungen" , :class => "arrow" %>				
 <hr/>
 
 				</div>
 </div>
 			<div id="subcontent"><div class="tab">	
-<%= render :partial => 'partials/leistungen' %>
+Content
 				</div>
 </div>
 		

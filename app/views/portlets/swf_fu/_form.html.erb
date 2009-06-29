@@ -1,0 +1,5 @@
+
+<%= f.cms_text_field :name %>
+
+<%= f.cms_drop_down :swf_block_id, SwfBlock.find(:all).map{|c| [c.name, c.id]}, { :selected=>f.object.swf_block_id.to_i, :include_blank=>"SWFs", :instructions=>"Select a swf " } %>
+<%= f.cms_text_area :template, :default_value => @block.class.default_template %>
